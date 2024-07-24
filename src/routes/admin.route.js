@@ -4,7 +4,7 @@ const adminController = require('../controllers/admin.controller');
 const isAdmin = require('../middlewares/is-admin');
 const isAuth = require("../middlewares/is-auth")
 
-const route = "/admins"
+const route = "/admin"
 
 router.get(`${route}/all`, isAuth, isAdmin, adminController.getAllAdmins);
 router.post(`${route}/create`, isAuth, isAdmin, adminController.createAdmin);
